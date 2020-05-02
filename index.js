@@ -57,6 +57,7 @@ function getPerson() {
         
         person = possibilities[Math.floor(Math.random() * possibilities.length)];
         document.getElementById("img").src = person.picture;
+        document.getElementById("img").title = person.firstName[0] + person.lastName[0];
     }
     else
     {
