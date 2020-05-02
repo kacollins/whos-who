@@ -99,6 +99,7 @@ function check() {
     document.getElementById("result").innerHTML = successMessages[Math.floor(Math.random() * successMessages.length)];
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).done = "1";
     getPerson();
+    updateScore();
   }
   else if(firstNameSelected === person.firstName || lastNameSelected === person.lastName) {
     document.getElementById("result").innerHTML = halfRightMessages[Math.floor(Math.random() * halfRightMessages.length)];
@@ -112,4 +113,9 @@ function skip() {
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).skip = "1";
     document.getElementById("result").innerHTML = "";
     getPerson();
+}
+
+function updateScore() {
+    document.getElementById("score").innerHTML = "Done: " + people.filter(x => x.done).length 
+                                            + ", Left: " + people.filter(x => x.picture && !x.done).length;
 }
