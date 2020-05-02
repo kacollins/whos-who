@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>Who's Who at MYCG</head>
+    <head>
+        <title>Who's Who at MYCG</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
     <body>
-        <p><img id="img" style="max-height: 600px;"></p>
-        <div id="play">
-            <select id="firstName"></select>
-            <select id="lastName"></select>
-            <button type="button" id="check">Check</button>
+        <div class="jumbotron">
+            <img id="img" style="max-height: 600px; margin: 10px;">
+            <div id="play">
+                <select id="firstName"></select>
+                <select id="lastName"></select>
+                <button type="button" id="check" class="btn btn-primary">Check</button>
+                <button type="button" id="skip" class="btn btn-secondary">Skip</button>
+            </div>
+            <p id="result"></p>
         </div>
-        <p id="result"></p>
         <script src="index.js"></script>
     </body>
 </html>

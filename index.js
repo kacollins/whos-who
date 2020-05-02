@@ -44,19 +44,25 @@ loadOptions(people.map(x => x.firstName).filter(unique).sort(), document.getElem
 loadOptions(people.map(x => x.lastName).filter(unique).sort(), document.getElementById("lastName"));
 
 document.getElementById("check").addEventListener("click", check);
+document.getElementById("skip").addEventListener("click", skip);
 
 function getPerson() {
     var possibilities = people.filter(x => x.picture && !x.done);
-    
+
     if (possibilities.length > 0)
     {
+        if (possibilities.length > 1 && person) {
+            possibilities = possibilities.filter(x => x.firstName != person.firstName || x.lastName != person.lastName);
+        }
+        
         person = possibilities[Math.floor(Math.random() * possibilities.length)];
         document.getElementById("img").src = person.picture;
     }
     else
     {
-        var names = people.filter(x => x.picture && x.done).map(x => x.firstName + " " + x.lastName).join("<br>");
-        document.getElementById("result").innerHTML = "You got them all!<br><br>" + names;
+        var pictured = people.filter(x => x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
+        var notpictured = people.filter(x => !x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
+        document.getElementById("result").innerHTML = "You got them all!<br><br>" + pictured + "<br><br>Not Pictured:<br>" + notpictured;
         document.getElementById("img").src = "http://www.myconsultinggroup.com/assets/img/logo/headerLogo.png";
         document.getElementById("play").style.visibility = 'hidden'; 
     }
@@ -76,7 +82,8 @@ function unique(value, index, self) {
 }
 
 var successMessages = ["You got it!", "Great job!"];
-var failureMessages = ["Try again!", "Not even close!"];
+var halfRightMessages = ["So close!", "You're half right!"];
+var failureMessages = ["Try again!", "Not even close!", "Did you even try?"];
 
 function check() {
   var firstNameSelected = document.getElementById("firstName").value;
@@ -87,7 +94,14 @@ function check() {
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).done = "1";
     getPerson();
   }
+  else if(firstNameSelected === person.firstName || lastNameSelected === person.lastName) {
+    document.getElementById("result").innerHTML = halfRightMessages[Math.floor(Math.random() * halfRightMessages.length)];
+  }
   else {
     document.getElementById("result").innerHTML = failureMessages[Math.floor(Math.random() * failureMessages.length)];
   }
+}
+
+function skip() {
+    getPerson();
 }
