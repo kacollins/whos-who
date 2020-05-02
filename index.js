@@ -69,8 +69,7 @@ function getPerson() {
         var pictured = people.filter(x => x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
         var notpictured = people.filter(x => !x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
         document.getElementById("result").innerHTML = "You got them all!<br><br>" + pictured + "<br><br>Not Pictured:<br>" + notpictured;
-        document.getElementById("img").src = "http://www.myconsultinggroup.com/assets/img/logo/headerLogo.png";
-        document.getElementById("play").style.visibility = 'hidden'; 
+        document.getElementById("play").style.display = 'none'; 
     }
 }
 
