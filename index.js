@@ -49,6 +49,11 @@ document.getElementById("skip").addEventListener("click", skip);
 function getPerson() {
     var possibilities = people.filter(x => x.picture && !x.done && !x.skip);
 
+    if (possibilities.length === 0) {
+        possibilities = people.filter(x => x.picture && !x.done);
+        people.forEach(x => x.skip = null);
+    }
+
     if (possibilities.length > 0)
     {
         if (possibilities.length > 1 && person) {
@@ -105,5 +110,6 @@ function check() {
 
 function skip() {
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).skip = "1";
+    document.getElementById("result").innerHTML = "";
     getPerson();
 }
