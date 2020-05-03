@@ -11,7 +11,7 @@ var people = [
     { firstName: 'Brent', lastName: 'Beachler', picture: 'http://moderntrill.com/img/team/3.jpg' },
     { firstName: 'Bryan', lastName: 'Haas', picture: 'Pictures/Bryan.png' },
     { firstName: 'Caitlin', lastName: 'Stewart', picture: 'https://pbs.twimg.com/profile_images/590660648884953088/ELguo9zO_400x400.jpg' },
-    { firstName: 'Chad', lastName: 'Evans', picture: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/14141987_1160643213981221_5106362624990197306_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=vieJ1uWnMMMAX9yBPJR&_nc_ht=scontent-dfw5-1.xx&oh=d7aa698192a39683b84d51b2c8499609&oe=5ED44132' },
+    { firstName: 'Chad', lastName: 'Evans', picture: 'Pictures/Chad.png' },
     { firstName: 'Chuck', lastName: 'Wallace', picture: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/11754260_10204830037777446_4541829961710943003_n.jpg?_nc_cat=108&_nc_sid=e007fa&_nc_ohc=wSftXijcFukAX-mez0P&_nc_ht=scontent-dfw5-2.xx&oh=fe8aa770006c7420cd174538920d02c0&oe=5ED0E941' },
     { firstName: 'Danny', lastName: 'Taylor', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQEtNZsiT26rjg/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=vl5AY5umW-3ujLKCSu0qude381b8WYatp2t7xGRGZzA' },
     { firstName: 'Debra', lastName: 'Depuy', picture: 'https://media-exp1.licdn.com/dms/image/C4D03AQFoBUCKTsVhyQ/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=VTtJR_U-gl7SwRoibO3ekCC1DT60jSfp8yHUn_yTZM8' },
@@ -24,12 +24,12 @@ var people = [
     { firstName: 'Kyle', lastName: 'Thomason', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQGv4RAG0VRxjg/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=vPzs2AMcfZtKiLLP7_7grhaRX9y2NKha2aA98UdullE' },
     { firstName: 'Matt', lastName: 'Breeding', picture: 'https://media-exp1.licdn.com/dms/image/C4D03AQGBRoz2GvDvew/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=tpv_LiXjfiMFHbvzSmJ8fmXm08zNz1pS65mNQ92VIWc' },
     { firstName: 'Micah', lastName: 'McKinnon', picture: 'Pictures/Micah.png' },
-    { firstName: 'Mike', lastName: 'Mitchell', picture: 'https://ap.rdcpix.com/2079968914/9321e42131100314df1ce0789a0b76a0a-c0od-r7_w144.jpg' },
-    { firstName: 'Mitch', lastName: 'Owen', picture: '' },
+    { firstName: 'Mike', lastName: 'Mitchell', picture: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/45035_1478019948656_1829241_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=qQxLwl9XqY8AX8D0Wdk&_nc_ht=scontent-dfw5-2.xx&oh=f4bcc7745074b7a4d6427f8919ff7893&oe=5ED29E52' },
+    { firstName: 'Mitch', lastName: 'Owen', picture: 'Pictures/Mitch.jpg' },
     { firstName: 'Obiye', lastName: 'Kolokolo', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQH6QxZlsTJkWA/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=GkiuVcXRZUuQn_j12RIzG3gxsZ26WqcE9LOZa4ElXIE' },
     { firstName: 'Phillip', lastName: 'Braddy', picture: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/75326_1649951458850_6012910_n.jpg?_nc_cat=101&_nc_sid=e007fa&_nc_ohc=73VBWM2v5jsAX-slaXl&_nc_ht=scontent-dfw5-1.xx&oh=142aa1cc454675b7adc4ed0628687eff&oe=5ED3DF01' },
     { firstName: 'Prather', lastName: 'Thomas', picture: 'https://media-exp1.licdn.com/dms/image/C4E03AQGEhe1GZ9kUfw/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=JAXiPkhXKsJguEwGD6TCuZwmJPI_msp45KphZZ0C6Ec' },
-    { firstName: 'Rhonda', lastName: 'Cook', picture: 'https://media-exp1.licdn.com/dms/image/C4E03AQEARegJmoEI8Q/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=AqepisHLWpmzAFSj6b-TlECh0BZl0oI7Wv-EqHeNf6s' },
+    { firstName: 'Rhonda', lastName: 'Cook', picture: 'Pictures/Rhonda.png' },
     { firstName: 'Ryan', lastName: 'Burk', picture: 'Pictures/Ryan.png' },
     { firstName: 'Ryan', lastName: 'Jayo', picture: 'https://media-exp1.licdn.com/dms/image/C4E03AQHFlRlRQgj96g/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=WreXyaFDGdQ5cpISlmzLGtyfumejZMZaP9aAobGesV0' },
     { firstName: 'Ryan', lastName: 'Johnson', picture: 'http://moderntrill.com/img/team/1.jpg' },
@@ -39,6 +39,7 @@ var people = [
 
 var person;
 getPerson();
+updateScore();
 
 loadOptions(people.map(x => x.firstName).filter(unique).sort(), document.getElementById("firstName"));
 loadOptions(people.map(x => x.lastName).filter(unique).sort(), document.getElementById("lastName"));
