@@ -12,7 +12,7 @@ var people = [
     { firstName: 'Bryan', lastName: 'Haas', picture: 'Pictures/Bryan.png' },
     { firstName: 'Caitlin', lastName: 'Stewart', picture: 'https://pbs.twimg.com/profile_images/590660648884953088/ELguo9zO_400x400.jpg' },
     { firstName: 'Chad', lastName: 'Evans', picture: 'Pictures/Chad.png' },
-    { firstName: 'Chuck', lastName: 'Wallace', picture: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/11754260_10204830037777446_4541829961710943003_n.jpg?_nc_cat=108&_nc_sid=e007fa&_nc_ohc=wSftXijcFukAX-mez0P&_nc_ht=scontent-dfw5-2.xx&oh=fe8aa770006c7420cd174538920d02c0&oe=5ED0E941' },
+    { firstName: 'Chuck', lastName: 'Wallace', picture: 'Pictures/Chuck.png' },
     { firstName: 'Danny', lastName: 'Taylor', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQEtNZsiT26rjg/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=vl5AY5umW-3ujLKCSu0qude381b8WYatp2t7xGRGZzA' },
     { firstName: 'Debra', lastName: 'Depuy', picture: 'https://media-exp1.licdn.com/dms/image/C4D03AQFoBUCKTsVhyQ/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=VTtJR_U-gl7SwRoibO3ekCC1DT60jSfp8yHUn_yTZM8' },
     { firstName: 'Eric', lastName: 'Moore', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQEHGGiO2w6FgA/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=czHtR00RgYW8ZURXtkSTSwYrMQn1RCwdMOpJH_yNjmI' },
