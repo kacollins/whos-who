@@ -4,7 +4,7 @@ var people = [
     { firstName: 'AJ', lastName: 'Alexander', picture: 'https://media-exp1.licdn.com/dms/image/C4E03AQF7oSe_t2hAYw/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=P2VrZ_Mcty7HpDkgaM-h9q5lIJJEe_kbhyIACMjZUWQ' },
     { firstName: 'Amber', lastName: 'Mitchell', picture: '' },
     { firstName: 'Austin', lastName: 'Keeton', picture: 'https://avatars0.githubusercontent.com/u/14999024' },
-    { firstName: 'Barrett', lastName: 'Cid', picture: '' },
+    { firstName: 'Barrett', lastName: 'Cid', picture: 'Pictures/Barrett.png' },
     { firstName: 'Ben', lastName: 'Hornbacher', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQG51XeqleWhTA/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=bWvanJUXmbW6Xe1qmauYKz9B-Stom4Yk2MiV9zJAXlI' },
     { firstName: 'Brad', lastName: 'Mell', picture: 'https://media-exp1.licdn.com/dms/image/C5603AQGKTEFyWYllqQ/profile-displayphoto-shrink_800_800/0?e=1593648000&v=beta&t=ilyu_prL9KqqgoqZFAVdXY_noBcaDkc9DqxD2eI3108' },
     { firstName: 'Brandon', lastName: 'Morgan', picture: 'http://moderntrill.com/img/team/2.jpg' },
