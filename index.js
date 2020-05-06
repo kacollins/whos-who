@@ -116,6 +116,6 @@ function skip() {
 }
 
 function updateScore() {
-    document.getElementById("score").innerHTML = "Done: " + people.filter(x => x.done).length 
-                                            + ", Left: " + people.filter(x => x.picture && !x.done).length;
+    document.getElementById("done").innerHTML = people.filter(x => x.done).length ;
+    document.getElementById("left").innerHTML = people.filter(x => x.picture && !x.done).length;
 }
