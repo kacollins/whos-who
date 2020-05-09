@@ -67,11 +67,22 @@ function getPerson() {
     }
     else
     {
-        var pictured = people.filter(x => x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
-        var notpictured = people.filter(x => !x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
-        document.getElementById("result").innerHTML = "You got them all!<br><br>" + pictured + "<br><br>Not Pictured:<br>" + notpictured;
-        document.getElementById("play").style.display = 'none'; 
+        win();
     }
+}
+
+function win() {
+    var pictured = people.filter(x => x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
+    var notpictured = people.filter(x => !x.picture).map(x => x.firstName + " " + x.lastName).join("<br>");
+    var resultElement = document.getElementById("result");
+
+    resultElement.innerHTML = "You got them all!<br><br>" + pictured + "<br><br>Not Pictured:<br>" + notpictured;
+    resultElement.classList.remove("alert-success");
+    resultElement.classList.remove("alert-warning");
+    resultElement.classList.remove("alert-danger");
+
+    document.getElementById("play").style.display = 'none';
+    document.getElementById("score").style.display = 'none';
 }
 
 function loadOptions(list, select) {
@@ -94,28 +105,52 @@ var failureMessages = ["Try again!", "Not even close!", "Did you even try?"];
 function check() {
   var firstNameSelected = document.getElementById("firstName").value;
   var lastNameSelected = document.getElementById("lastName").value;
+  var resultElement = document.getElementById("result");
+  removeResultStyles();
 
   if(firstNameSelected === person.firstName && lastNameSelected === person.lastName) {
-    document.getElementById("result").innerHTML = successMessages[Math.floor(Math.random() * successMessages.length)];
+    resultElement.innerHTML = successMessages[Math.floor(Math.random() * successMessages.length)];
+    resultElement.classList.add("alert-success");
+
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).done = "1";
     getPerson();
     updateScore();
   }
   else if(firstNameSelected === person.firstName || lastNameSelected === person.lastName) {
-    document.getElementById("result").innerHTML = halfRightMessages[Math.floor(Math.random() * halfRightMessages.length)];
+    resultElement.innerHTML = halfRightMessages[Math.floor(Math.random() * halfRightMessages.length)];
+    resultElement.classList.add("alert-warning");
   }
   else {
-    document.getElementById("result").innerHTML = failureMessages[Math.floor(Math.random() * failureMessages.length)];
+    resultElement.innerHTML = failureMessages[Math.floor(Math.random() * failureMessages.length)];
+    resultElement.classList.add("alert-danger");
   }
 }
 
 function skip() {
     people.find(({ firstName, lastName }) => firstName === person.firstName && lastName === person.lastName).skip = "1";
-    document.getElementById("result").innerHTML = "";
+    var resultElement = document.getElementById("result");
+    resultElement.innerHTML = "";
+    removeResultStyles(resultElement);
     getPerson();
+}
+
+function removeResultStyles() {
+    var resultElement = document.getElementById("result");
+    resultElement.classList.remove("alert-success");
+    resultElement.classList.remove("alert-warning");
+    resultElement.classList.remove("alert-danger");
 }
 
 function updateScore() {
     document.getElementById("done").innerHTML = people.filter(x => x.done).length ;
     document.getElementById("left").innerHTML = people.filter(x => x.picture && !x.done).length;
+}
+
+function cheat(advance) {
+    document.getElementById("firstName").value = person.firstName;
+    document.getElementById("lastName").value = person.lastName;
+
+    if (advance) {
+        check();
+    }
 }

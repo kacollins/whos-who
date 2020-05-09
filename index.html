@@ -8,33 +8,41 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div style="display: flex; justify-content: center; width: 450px;">
-                <h1>Who's Who at MYCG?</h1>
-            </div>
-            <div class="jumbotron" style="width: 450px; height:650px;">
-                <div id="play">
-                    <div style="height: 350px;">
-                        <div style="display: flex; justify-content: center;">
-                            <img id="img" style="min-height: 250px; max-height: 300px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                    <div class="center">
+                        <h1>Who's Who at MYCG?</h1>
+                    </div>
+                    <div class="jumbotron">
+                        <div id="play">
+                            <div style="height: 350px;">
+                                <div class="center">
+                                    <img id="img" style="min-height: 250px; max-height: 300px;">
+                                </div>
+                            </div>
+                            <div class="center">
+                                <select id="firstName"></select>
+                                <select id="lastName"></select>
+                                <button type="button" id="check" class="btn btn-primary btn-lg" accesskey="c">Check</button>
+                                <button type="button" id="skip" class="btn btn-secondary btn-lg" accesskey="s">Skip</button>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <p id="result" class="alert" style="min-width: 120px; width: auto;"></p>
+                        </div>
+                        <div class="center" id="score">
+                            <ul class="list-group" style="width: 120px;">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Done: 
+                                    <span class="badge badge-pill badge-primary" id="done"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Left: 
+                                    <span class="badge badge-pill badge-secondary" id="left"></span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <select id="firstName"></select>
-                    <select id="lastName"></select>
-                    <button type="button" id="check" class="btn btn-primary" accesskey="c">Check</button>
-                    <button type="button" id="skip" class="btn btn-secondary" accesskey="s">Skip</button>
-                </div>
-                <p id="result"></p>
-                <div style="display: flex; justify-content: center;">
-                    <ul class="list-group" style="width: 120px;">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Done: 
-                            <span class="badge badge-pill badge-primary" id="done"></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Left: 
-                            <span class="badge badge-pill badge-secondary" id="left"></span>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
