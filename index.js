@@ -153,4 +153,6 @@ function cheat(advance) {
     if (advance) {
         check();
     }
+
+    return person.firstName + " " + person.lastName;
 }
